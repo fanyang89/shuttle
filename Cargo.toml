@@ -4,6 +4,7 @@ members = [
     "shuttle-schedulers",
     "shuttle-std",
     "shuttle",
+    "shuttle-ffi",
     "wrappers/shuttle_rand_0.8",
     "wrappers/shuttle_sync",
     "wrappers/collections",
@@ -27,3 +28,8 @@ members = [
 ]
 
 resolver = "2"
+
+# Zig scenarios run in dedicated processes. Never unwind through a Zig callback.
+[profile.zig-test]
+inherits = "dev"
+panic = "abort"

@@ -1,5 +1,7 @@
 # Wrappers
 
+For Zig concurrency scenarios, see the [Zig adapter](zig/README.md).
+
 This directory contains a collection of wrappers and their implementations. The general scheme to use these is by doing the following:
 
 ```toml
